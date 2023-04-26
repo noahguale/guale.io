@@ -1,9 +1,8 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files"
-import rehypePrettyCode from "rehype-pretty-code"
-import { rehypePrettyCodeOptions } from "./lib/rehypePrettyCode"
-import { remarkCodeHike } from "@code-hike/mdx"
-const someTheme = require(".//lib/themes/tokyo-nights.json")
-
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import rehypePrettyCode from "rehype-pretty-code";
+import { rehypePrettyCodeOptions } from "./lib/rehypePrettyCode";
+import { remarkCodeHike } from "@code-hike/mdx";
+const someTheme = require(".//lib/themes/tokyo-nights.json");
 
 const Post = defineDocumentType(() => ({
   name: "Post",
@@ -29,7 +28,7 @@ const Post = defineDocumentType(() => ({
           .replace(/\.mdx$/, ""),
     },
   },
-}))
+}));
 
 const Project = defineDocumentType(() => ({
   name: "Project",
@@ -41,8 +40,8 @@ const Project = defineDocumentType(() => ({
     excerpt: { type: "string", required: true },
     stack: {
       type: "list",
-      of: { type: 'string' },
-    },    
+      of: { type: "string" },
+    },
     githubUrl: { type: "string", required: true },
   },
   computedFields: {
@@ -54,7 +53,7 @@ const Project = defineDocumentType(() => ({
           .replace(/\.mdx$/, ""),
     },
   },
-}))
+}));
 
 export default makeSource({
   // Location of source files for all defined documentTypes
@@ -62,22 +61,26 @@ export default makeSource({
   documentTypes: [Post, Project],
   mdx: {
     // rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions,]],
-    remarkPlugins: [[remarkCodeHike,
-      {
-        lineNumbers: true,
-        showCopyButton: true,
-        theme: "dracula",
-        skipLanguages: ["mermaid"],
-        staticMediaQuery: "not screen, (max-width: 768px)",
-        autoImport: true,
-      },]]
+    remarkPlugins: [
+      [
+        remarkCodeHike,
+        {
+          lineNumbers: true,
+          showCopyButton: true,
+          theme: "dracula",
+          skipLanguages: ["mermaid"],
+          staticMediaQuery: "not screen, (max-width: 768px)",
+          autoImport: true,
+        },
+      ],
+    ],
   },
-})
+});
 
-import { defineNestedType } from "contentlayer/source-files"
+import { defineNestedType } from "contentlayer/source-files";
 
-export const allTagNames = ["Next.js", "MDX", "Next Conf", "React Conf"]
-export const allTagSlugs = ["next", "mdx", "next-conf", "react-conf"]
+export const allTagNames = ["Next.js", "MDX", "Next Conf", "React Conf"];
+export const allTagSlugs = ["next", "mdx", "next-conf", "react-conf"];
 
 export const Tag = defineNestedType(() => ({
   name: "Tag",
@@ -93,4 +96,4 @@ export const Tag = defineNestedType(() => ({
       options: allTagSlugs,
     },
   },
-}))
+}));

@@ -1,9 +1,9 @@
-import { FOCUS_VISIBLE_OUTLINE, LINK_SUBTLE_STYLES } from "../../lib/constants"
-import cx from "clsx"
-import Link from "next/link"
-import Github from "components/icons/Github"
-import LinkedinIcon from "components/icons/LinkedinIcon"
-import InstagramIcon from "components/icons/InstagramIcon"
+import { FOCUS_VISIBLE_OUTLINE, LINK_SUBTLE_STYLES } from "../../lib/constants";
+import cx from "clsx";
+import Link from "next/link";
+import Github from "components/icons/Github";
+import LinkedinIcon from "components/icons/LinkedinIcon";
+import InstagramIcon from "components/icons/InstagramIcon";
 
 export const Footer = () => {
   return (
@@ -16,7 +16,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/noahguale"
                 className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
               >
-                <InstagramIcon className="text-gray-300"/>
+                <InstagramIcon className="text-gray-300" />
               </Link>
             </div>
 
@@ -33,21 +33,21 @@ export const Footer = () => {
               href="https://github.com/noahguale"
               className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
             >
-              <Github className="text-gray-300 w-[18px]"/>
+              <Github className="text-gray-300 w-[18px]" />
             </a>
             <a
               href="https://github.com/noahguale"
               className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
             >
-              <LinkedinIcon className="text-gray-300 w-[18px]"/>
+              <LinkedinIcon className="text-gray-300 w-[18px]" />
             </a>
           </div>
         </div>
       </div>
 
       <p className="flex items-center justify-center mt-4 text-gray-400">
-      © 2023 Noah Guale. All Rights Reserved.
+        © 2023 Noah Guale
       </p>
     </div>
-  )
-}
+  );
+};

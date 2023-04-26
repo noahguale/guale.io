@@ -1,3 +1,3 @@
 export type CurrentFilters = {
-  type?: "videos" | "blog"
-} | null
+  type?: "videos" | "blog";
+} | null;

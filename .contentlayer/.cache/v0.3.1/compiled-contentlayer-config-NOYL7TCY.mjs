@@ -1,7 +1,12 @@
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-};
+var __commonJS = (cb, mod) =>
+  function __require() {
+    return (
+      mod ||
+        (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod),
+      mod.exports
+    );
+  };
 
 // lib/themes/tokyo-nights.json
 var require_tokyo_nights = __commonJS({
@@ -12,151 +17,173 @@ var require_tokyo_nights = __commonJS({
       tokenColors: [
         {
           settings: {
-            foreground: "#bce7ff"
-          }
+            foreground: "#bce7ff",
+          },
         },
         {
-          scope: ["meta.paragraph.markdown", "string.other.link.description.title.markdown"],
+          scope: [
+            "meta.paragraph.markdown",
+            "string.other.link.description.title.markdown",
+          ],
           settings: {
-            foreground: "#EEFFFF"
-          }
+            foreground: "#EEFFFF",
+          },
         },
         {
-          scope: ["entity.name.section.markdown", "punctuation.definition.heading.markdown"],
+          scope: [
+            "entity.name.section.markdown",
+            "punctuation.definition.heading.markdown",
+          ],
           settings: {
-            foreground: "#5ABEB0"
-          }
+            foreground: "#5ABEB0",
+          },
         },
         {
           scope: [
             "punctuation.definition.string.begin.markdown",
             "punctuation.definition.string.end.markdown",
-            "markup.quote.markdown"
+            "markup.quote.markdown",
           ],
           settings: {
-            foreground: "#82AAFF"
-          }
+            foreground: "#82AAFF",
+          },
         },
         {
           scope: ["markup.quote.markdown"],
           settings: {
             fontStyle: "italic",
-            foreground: "#82AAFF"
-          }
+            foreground: "#82AAFF",
+          },
         },
         {
-          scope: ["markup.bold.markdown", "punctuation.definition.bold.markdown"],
+          scope: [
+            "markup.bold.markdown",
+            "punctuation.definition.bold.markdown",
+          ],
           settings: {
             fontStyle: "bold",
-            foreground: "#57cdff"
-          }
+            foreground: "#57cdff",
+          },
         },
         {
-          scope: ["markup.italic.markdown", "punctuation.definition.italic.markdown"],
+          scope: [
+            "markup.italic.markdown",
+            "punctuation.definition.italic.markdown",
+          ],
           settings: {
             fontStyle: "italic",
-            foreground: "#C792EA"
-          }
+            foreground: "#C792EA",
+          },
         },
         {
-          scope: ["markup.inline.raw.string.markdown", "markup.fenced_code.block.markdown"],
+          scope: [
+            "markup.inline.raw.string.markdown",
+            "markup.fenced_code.block.markdown",
+          ],
           settings: {
             fontStyle: "italic",
-            foreground: "#f7ecb5"
-          }
+            foreground: "#f7ecb5",
+          },
         },
         {
           scope: ["punctuation.definition.metadata.markdown"],
           settings: {
-            foreground: "#f3b8c2"
-          }
+            foreground: "#f3b8c2",
+          },
         },
         {
-          scope: ["markup.underline.link.image.markdown", "markup.underline.link.markdown"],
+          scope: [
+            "markup.underline.link.image.markdown",
+            "markup.underline.link.markdown",
+          ],
           settings: {
-            foreground: "#6dbdfa"
-          }
+            foreground: "#6dbdfa",
+          },
         },
         {
           name: "Comment",
           scope: "comment",
           settings: {
             fontStyle: "italic",
-            foreground: "#999999"
-          }
+            foreground: "#999999",
+          },
         },
         {
           name: "Quotes",
           scope: "punctuation.definition.string",
           settings: {
-            foreground: "#6bff81"
-          }
+            foreground: "#6bff81",
+          },
         },
         {
           name: "String",
           scope: "string",
           settings: {
-            foreground: "#bcf0c0"
-          }
+            foreground: "#bcf0c0",
+          },
         },
         {
           name: "String Quoted",
           scope: ["string.quoted", "variable.other.readwrite.js"],
           settings: {
             fontStyle: "",
-            foreground: "#bcf0c0"
-          }
+            foreground: "#bcf0c0",
+          },
         },
         {
           name: "Number",
           scope: "constant.numeric",
           settings: {
-            foreground: "#8dec95"
-          }
+            foreground: "#8dec95",
+          },
         },
         {
           name: "Boolean",
           scope: "constant.language.boolean",
           settings: {
-            foreground: "#8dec95"
-          }
+            foreground: "#8dec95",
+          },
         },
         {
           name: "Constant",
           scope: "constant",
           settings: {
-            foreground: "#A170C6"
-          }
+            foreground: "#A170C6",
+          },
         },
         {
           name: "Built-in constant",
-          scope: ["constant.language", "punctuation.definition.constant", "variable.other.constant"],
+          scope: [
+            "constant.language",
+            "punctuation.definition.constant",
+            "variable.other.constant",
+          ],
           settings: {
-            foreground: "#92b6f4"
-          }
+            foreground: "#92b6f4",
+          },
         },
         {
           name: "User-defined constant",
           scope: ["constant.character", "constant.other"],
           settings: {
-            foreground: "#82AAFF"
-          }
+            foreground: "#82AAFF",
+          },
         },
         {
           name: "Variable",
           scope: "variable",
           settings: {
             fontStyle: "italic",
-            foreground: "#a4ceee"
-          }
+            foreground: "#a4ceee",
+          },
         },
         {
           name: "JavaScript Other Variable",
           scope: "variable.other.object.js",
           settings: {
             foreground: "#d6deeb",
-            fontStyle: "italic"
-          }
+            fontStyle: "italic",
+          },
         },
         {
           name: "TypeScript[React] Variables and Object Properties",
@@ -172,40 +199,43 @@ var require_tokyo_nights = __commonJS({
             "variable.other.ts",
             "variable.other.tsx",
             "variable.tsx",
-            "variable.ts"
+            "variable.ts",
           ],
           settings: {
-            foreground: "#d6deeb"
-          }
+            foreground: "#d6deeb",
+          },
         },
         {
           name: "TypeScript Classes",
           scope: "meta.class entity.name.type.class.tsx",
           settings: {
-            foreground: "#d29ffcff"
-          }
+            foreground: "#d29ffcff",
+          },
         },
         {
           name: "TypeScript Entity Name Type",
           scope: ["entity.name.type.tsx", "entity.name.type.module.tsx"],
           settings: {
-            foreground: "#d29ffcff"
-          }
+            foreground: "#d29ffcff",
+          },
         },
         {
           name: "TypeScript Method Declaration e.g. `constructor`",
-          scope: ["meta.method.declaration storage.type.ts", "meta.method.declaration storage.type.tsx"],
+          scope: [
+            "meta.method.declaration storage.type.ts",
+            "meta.method.declaration storage.type.tsx",
+          ],
           settings: {
-            foreground: "#a1bde6"
-          }
+            foreground: "#a1bde6",
+          },
         },
         {
           name: "Variable Property Other object property",
           scope: ["variable.other.object.property"],
           settings: {
             foreground: "#f7ecb5",
-            fontStyle: "italic"
-          }
+            fontStyle: "italic",
+          },
         },
         {
           name: "Variable Instances",
@@ -214,56 +244,61 @@ var require_tokyo_nights = __commonJS({
             "variable.other.instance",
             "variable.readwrite.instance",
             "variable.other.readwrite.instance",
-            "variable.other.property"
+            "variable.other.property",
           ],
           settings: {
-            foreground: "#7fdbca"
-          }
+            foreground: "#7fdbca",
+          },
         },
         {
           name: "JavaScript Variable Other ReadWrite",
           scope: ["variable.other.readwrite.js", "variable.parameter"],
           settings: {
-            foreground: "#d7dbe0"
-          }
+            foreground: "#d7dbe0",
+          },
         },
         {
           name: "Template Strings",
           scope: "string.template meta.template.expression",
           settings: {
-            foreground: "#c63ed3"
-          }
+            foreground: "#c63ed3",
+          },
         },
         {
           name: "Backtics(``) in Template Strings",
           scope: "string.template punctuation.definition.string",
           settings: {
-            foreground: "#fff"
-          }
+            foreground: "#fff",
+          },
         },
         {
           name: "Storage",
           scope: "storage",
           settings: {
             fontStyle: "",
-            foreground: "#6dbdfa"
-          }
+            foreground: "#6dbdfa",
+          },
         },
         {
           name: "Keywords and Storage types",
-          scope: ["keyword", "storage.type", "storage.modifier", "variable.language.this"],
+          scope: [
+            "keyword",
+            "storage.type",
+            "storage.modifier",
+            "variable.language.this",
+          ],
           settings: {
             foreground: "#00bff9",
-            fontStyle: "italic"
-          }
+            fontStyle: "italic",
+          },
         },
         {
           name: "Keywords operators",
           scope: ["keyword.operator"],
           settings: {
             foreground: "#00bff9",
-            fontStyle: "italic"
-          }
+            fontStyle: "italic",
+          },
         },
         {
           name: "Storage",
@@ -272,12 +307,12 @@ var require_tokyo_nights = __commonJS({
             "meta.var.expr",
             "meta.class meta.method.declaration meta.var.expr storage.type.js",
             "storage.type.property.js",
-            "storage.type.property.ts"
+            "storage.type.property.ts",
           ],
           settings: {
             foreground: "#c792ea",
-            fontStyle: "italic"
-          }
+            fontStyle: "italic",
+          },
         },
         {
           name: "JavaScript module imports and exports",
@@ -285,246 +320,253 @@ var require_tokyo_nights = __commonJS({
             "variable.other.meta.import.js",
             "meta.import.js variable.other",
             "variable.other.meta.export.js",
-            "meta.export.js variable.other"
+            "meta.export.js variable.other",
           ],
           settings: {
-            foreground: "#d3eed6"
-          }
+            foreground: "#d3eed6",
+          },
         },
         {
           name: "Class name",
           scope: "entity.name.class",
           settings: {
-            foreground: "#f7ecb5"
-          }
+            foreground: "#f7ecb5",
+          },
         },
         {
           name: "Inherited class",
           scope: "entity.other.inherited-class",
           settings: {
             fontStyle: "",
-            foreground: "#4FB4D8"
-          }
+            foreground: "#4FB4D8",
+          },
         },
         {
           name: "Variables, Let and Const",
           scope: ["variable.other.readwrites", "meta.definition.variable"],
           settings: {
             fontStyle: "",
-            foreground: "#f7ecb5"
-          }
+            foreground: "#f7ecb5",
+          },
         },
         {
           name: "Support Variable Property",
           scope: "support.variable.property",
           settings: {
-            foreground: "#7fdbca"
-          }
+            foreground: "#7fdbca",
+          },
         },
         {
           name: "Function name",
           scope: "entity.name.function",
           settings: {
             fontStyle: "italic",
-            foreground: "#87aff4"
-          }
+            foreground: "#87aff4",
+          },
         },
         {
           name: "Function argument",
           scope: "variable.parameter",
           settings: {
             foreground: "#d7dbe0",
-            fontStyle: ""
-          }
+            fontStyle: "",
+          },
         },
         {
           name: "Tag name",
           scope: "entity.name.tag",
           settings: {
             fontStyle: "",
-            foreground: "#6dbdfa"
-          }
+            foreground: "#6dbdfa",
+          },
         },
         {
           name: "Entity Name Type",
           scope: "entity.name.type",
           settings: {
-            foreground: "#d29ffc"
-          }
+            foreground: "#d29ffc",
+          },
         },
         {
           name: "Tag attribute",
           scope: "entity.other.attribute-name",
           settings: {
             fontStyle: "italic",
-            foreground: "#f7ecb5"
-          }
+            foreground: "#f7ecb5",
+          },
         },
         {
           name: "Meta - Decorator",
           scope: ["punctuation.decorator"],
           settings: {
             fontStyle: "italic",
-            foreground: "#f7ecb5"
-          }
+            foreground: "#f7ecb5",
+          },
         },
         {
           name: "Punctuation/Brackets/Tags",
           scope: ["punctuation.definition.block", "punctuation.definition.tag"],
           settings: {
-            foreground: "#ffffff"
-          }
+            foreground: "#ffffff",
+          },
         },
         {
           name: "Library function",
           scope: "support.function",
           settings: {
             fontStyle: "",
-            foreground: "#f7ecb5"
-          }
+            foreground: "#f7ecb5",
+          },
         },
         {
           name: "Library constant",
           scope: "support.constant",
           settings: {
             fontStyle: "",
-            foreground: "#ec9cd2"
-          }
+            foreground: "#ec9cd2",
+          },
         },
         {
           name: "Library class/type",
           scope: ["support.type", "support.class"],
           settings: {
-            foreground: "#7fdbca"
-          }
+            foreground: "#7fdbca",
+          },
         },
         {
           name: "Library variable",
           scope: "support.other.variable",
           settings: {
-            foreground: "#CBCDD2"
-          }
+            foreground: "#CBCDD2",
+          },
         },
         {
           name: "Invalid",
           scope: "invalid",
           settings: {
             fontStyle: " italic bold underline",
-            foreground: "#6dbdfa"
-          }
+            foreground: "#6dbdfa",
+          },
         },
         {
           name: "Invalid deprecated",
           scope: "invalid.deprecated",
           settings: {
             foreground: "#6dbdfa",
-            fontStyle: " bold italic underline"
-          }
+            fontStyle: " bold italic underline",
+          },
         },
         {
           name: "JSON Property Names",
           scope: "support.type.property-name.json",
           settings: {
-            foreground: "#91dacd"
-          }
+            foreground: "#91dacd",
+          },
         },
         {
           name: "JSON Support Constants",
           scope: "support.constant.json",
           settings: {
-            foreground: "#addb67"
-          }
+            foreground: "#addb67",
+          },
         },
         {
           name: "JSON Property values (string)",
           scope: "meta.structure.dictionary.value.json string.quoted.double",
           settings: {
-            foreground: "#e0aff5"
-          }
+            foreground: "#e0aff5",
+          },
         },
         {
           name: "Strings in JSON values",
           scope: "string.quoted.double.json punctuation.definition.string.json",
           settings: {
-            foreground: "#80CBC4"
-          }
+            foreground: "#80CBC4",
+          },
         },
         {
           name: "Specific JSON Property values like null",
-          scope: "meta.structure.dictionary.json meta.structure.dictionary.value constant.language",
+          scope:
+            "meta.structure.dictionary.json meta.structure.dictionary.value constant.language",
           settings: {
-            foreground: "#f29fd8"
-          }
+            foreground: "#f29fd8",
+          },
         },
         {
           name: "[JSON] - Support",
           scope: "source.json support",
           settings: {
-            foreground: "#6dbdfa"
-          }
+            foreground: "#6dbdfa",
+          },
         },
         {
           name: "[JSON] - String",
-          scope: ["source.json string", "source.json punctuation.definition.string"],
+          scope: [
+            "source.json string",
+            "source.json punctuation.definition.string",
+          ],
           settings: {
-            foreground: "#ece7cd"
-          }
+            foreground: "#ece7cd",
+          },
         },
         {
           name: "Lists",
           scope: "markup.list",
           settings: {
-            foreground: "#6dbdfa"
-          }
+            foreground: "#6dbdfa",
+          },
         },
         {
           name: "Headings",
-          scope: ["markup.heading punctuation.definition.heading", "entity.name.section"],
+          scope: [
+            "markup.heading punctuation.definition.heading",
+            "entity.name.section",
+          ],
           settings: {
             fontStyle: "",
-            foreground: "#4FB4D8"
-          }
+            foreground: "#4FB4D8",
+          },
         },
         {
           name: "Support",
           scope: [
             "text.html.markdown meta.paragraph meta.link.inline",
             "text.html.markdown meta.paragraph meta.link.inline punctuation.definition.string.begin.markdown",
-            "text.html.markdown meta.paragraph meta.link.inline punctuation.definition.string.end.markdown"
+            "text.html.markdown meta.paragraph meta.link.inline punctuation.definition.string.end.markdown",
           ],
           settings: {
-            foreground: "#78bd65"
-          }
+            foreground: "#78bd65",
+          },
         },
         {
           name: "[Markdown] text ",
           scope: ["meta.paragraph.markdown"],
           settings: {
-            foreground: "#ffffff"
-          }
+            foreground: "#ffffff",
+          },
         },
         {
           name: "Quotes",
           scope: "markup.quote",
           settings: {
             foreground: "#78bd65",
-            fontStyle: "italic"
-          }
+            fontStyle: "italic",
+          },
         },
         {
           name: "Link Url",
           scope: "meta.link",
           settings: {
-            foreground: "#78BD65"
-          }
+            foreground: "#78BD65",
+          },
         },
         {
           name: "Dockerfile",
           scope: "source.dockerfile",
           settings: {
-            foreground: "#99d0f7"
-          }
-        }
+            foreground: "#99d0f7",
+          },
+        },
       ],
       colors: {
         "activityBar.background": "#282822",
@@ -659,10 +701,10 @@ var require_tokyo_nights = __commonJS({
         "walkThrough.embeddedEditorBackground": "#001111",
         "welcomePage.buttonBackground": "#282822",
         "welcomePage.buttonHoverBackground": "#282822",
-        "widget.shadow": "#219fd5"
-      }
+        "widget.shadow": "#219fd5",
+      },
     };
-  }
+  },
 });
 
 // contentlayer.config.ts
@@ -682,15 +724,15 @@ var Post = defineDocumentType(() => ({
     status: { type: "enum", options: ["draft", "published"], required: true },
     tags: {
       type: "list",
-      of: Tag
-    }
+      of: Tag,
+    },
   },
   computedFields: {
     slug: {
       type: "string",
-      resolve: (post) => post._raw.sourceFileName.replace(/\.mdx$/, "")
-    }
-  }
+      resolve: (post) => post._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+  },
 }));
 var Project = defineDocumentType(() => ({
   name: "Project",
@@ -702,16 +744,16 @@ var Project = defineDocumentType(() => ({
     excerpt: { type: "string", required: true },
     stack: {
       type: "list",
-      of: { type: "string" }
+      of: { type: "string" },
     },
-    githubUrl: { type: "string", required: true }
+    githubUrl: { type: "string", required: true },
   },
   computedFields: {
     slug: {
       type: "string",
-      resolve: (post) => post._raw.sourceFileName.replace(/\.mdx$/, "")
-    }
-  }
+      resolve: (post) => post._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+  },
 }));
 var contentlayer_config_default = makeSource({
   // Location of source files for all defined documentTypes
@@ -719,18 +761,20 @@ var contentlayer_config_default = makeSource({
   documentTypes: [Post, Project],
   mdx: {
     // rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions,]],
-    remarkPlugins: [[
-      remarkCodeHike,
-      {
-        lineNumbers: true,
-        showCopyButton: true,
-        theme: "dracula",
-        skipLanguages: ["mermaid"],
-        staticMediaQuery: "not screen, (max-width: 768px)",
-        autoImport: true
-      }
-    ]]
-  }
+    remarkPlugins: [
+      [
+        remarkCodeHike,
+        {
+          lineNumbers: true,
+          showCopyButton: true,
+          theme: "dracula",
+          skipLanguages: ["mermaid"],
+          staticMediaQuery: "not screen, (max-width: 768px)",
+          autoImport: true,
+        },
+      ],
+    ],
+  },
 });
 var allTagNames = ["Next.js", "MDX", "Next Conf", "React Conf"];
 var allTagSlugs = ["next", "mdx", "next-conf", "react-conf"];
@@ -740,19 +784,19 @@ var Tag = defineNestedType(() => ({
     title: {
       type: "enum",
       required: true,
-      options: allTagNames
+      options: allTagNames,
     },
     slug: {
       type: "enum",
       required: true,
-      options: allTagSlugs
-    }
-  }
+      options: allTagSlugs,
+    },
+  },
 }));
 export {
   Tag,
   allTagNames,
   allTagSlugs,
-  contentlayer_config_default as default
+  contentlayer_config_default as default,
 };
 //# sourceMappingURL=compiled-contentlayer-config-NOYL7TCY.mjs.map
