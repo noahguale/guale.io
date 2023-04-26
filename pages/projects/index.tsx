@@ -42,10 +42,10 @@ export async function getStaticProps() {
             
               {/* <div className="grid grid-cols-1 lg:grid-cols-2 w-6/12 place-items-center gap-10"> */}
               <div className="flex flex-col justify-between items-center animated animatedFadeInUp fadeInUp">
-              <div className="container py-12 max-w-2xl px-4  sm:px-6 xl:max-w-2xl xl:px-0 ">
+              <div className="container py-12 max-w-2xl px-4  sm:px-6 xl:max-w-2xl xl:px-0">
               {/* <h1 className="text-3xl mb-5 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">Projects</h1>
               <p className="text-lg mb-10 leading-7 text-gray-300 dark:text-gray-300">Things I Have Made in the Past. Mostly open source</p>   */}
-                <div className="flex flex-wrap -m-4 ">
+                <div className="flex flex-wrap ml-14">
                   {allPostsData.map(({ id, date, title, excerpt, coverImage, stack, blogpost, githubUrl } :{
                         id: any,
                         date: any,
@@ -57,7 +57,7 @@ export async function getStaticProps() {
                         githubUrl: any
                     }) => (
 
-                    <div className="p-2 w-5/6 xs:w-1/2 md:w-5/12	 ">
+                    <div className="p-2 w-5/6 xs:w-1/2 md:w-6/12	 ">
                       <div className="h-full overflow-hidden border-2 border-gray-400 rounded-md border-opacity-60 dark:border-gray-400 shadow-surface-elevation-low transition duration-200 hover:bg-sky-100/10 hover:shadow-surface-elevation-medium focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:sky-500/70">
                         <div className="p-3">
                           <h2 className="mb-1 text-xl font-bold tracking-tight text-white">
