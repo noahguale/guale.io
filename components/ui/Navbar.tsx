@@ -22,19 +22,11 @@ export const Navbar = ({
   currentFilters?: CurrentFilters;
 }) => {
   return (
-    <div className="flex items-center space-x-7 text-base font-semibold leading-none text-rose-100/90">
+    <div className="flex items-center space-x-12 text-base font-semibold leading-none">
       <Link href="/projects" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
-            <div
-              className={cx(
-                "rounded-lg bg-gradient-to-tl from-sky-500/80 to-sky-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1",
-                {
-                  "ring-[2px] ring-blue-500/30 ring-offset-1 ring-offset-black/5":
-                    currentFilters?.type === "videos",
-                }
-              )}
-            >
+          <div className="rounded-lg bg-gradient-to-tl from-sky-500/80 to-sky-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1">
               <CodeBracketIcon className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
@@ -45,15 +37,7 @@ export const Navbar = ({
       <Link href="/blog" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
-            <div
-              className={cx(
-                "rounded-lg bg-gradient-to-tl from-sky-500/80 to-sky-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1",
-                {
-                  "ring-[2px] ring-blue-500/30 ring-offset-1 ring-offset-black/5":
-                    currentFilters?.type === "blog",
-                }
-              )}
-            >
+          <div className="rounded-lg bg-gradient-to-tl from-sky-500/80 to-sky-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1">
               <NewspaperIcon className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
