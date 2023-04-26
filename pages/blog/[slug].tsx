@@ -8,7 +8,6 @@ import Head from "next/head"
 import Link from "next/link"
 // import * as React from 'react';
 import Image from 'next/image';
-import { LikeButtonHeart } from "components/ui/LikeButtonHeart"
 
 
 export const getStaticPaths = () => {
