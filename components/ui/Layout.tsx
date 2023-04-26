@@ -10,7 +10,7 @@ import { Transition } from "@headlessui/react";
 import { GradientBackground } from "./GradientBackground";
 import Image from "next/image";
 import boxer from "public/images/boxer.gif";
-import Logo from "../icons/Logo"
+import Logo from "../icons/Logo";
 
 export const Layout = ({
   children,
@@ -43,7 +43,7 @@ export const Layout = ({
                 title="View home page"
                 className={cx("rounded-full", FOCUS_VISIBLE_OUTLINE)}
               >
-                  <Logo className="w-[32px] transform text-white transition delay-100 duration-300 ease-out hover:scale-125" />
+                <Logo className="w-[32px] transform text-white transition delay-100 duration-300 ease-out hover:scale-125" />
               </Link>
             </div>
             <Navbar currentFilters={currentFilters} />

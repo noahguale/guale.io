@@ -1,8 +1,6 @@
 export default function ({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 595.28 841.89"
-    className={className}
-    fill="currentColor">
+    <svg viewBox="0 0 595.28 841.89" className={className} fill="currentColor">
       <g>
         <path
           className="st0"

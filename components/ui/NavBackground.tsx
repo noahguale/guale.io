@@ -7,6 +7,7 @@ import { CurrentFilters } from "@/lib/types";
 import { ProfileImage } from "components/ui/ProfileImage";
 import cx from "clsx";
 import { FOCUS_VISIBLE_OUTLINE } from "../../lib/constants";
+import Logo from "../icons/Logo";
 
 export const NavBackground = ({
   children,
@@ -39,7 +40,8 @@ export const NavBackground = ({
                 title="View home page"
                 className={cx("rounded-full", FOCUS_VISIBLE_OUTLINE)}
               >
-                <ProfileImage size="small" isInteractive />
+                {/* <ProfileImage size="small" isInteractive /> */}
+                <Logo className="w-[32px] transform text-white transition delay-100 duration-300 ease-out hover:scale-125" />
               </Link>
             </div>
             <Navbar currentFilters={currentFilters} />
