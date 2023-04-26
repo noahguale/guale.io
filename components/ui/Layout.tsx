@@ -8,17 +8,8 @@ import { ProfileImage } from "./ProfileImage"
 import { Navbar } from "./Navbar"
 import { Transition } from "@headlessui/react"
 import { GradientBackground } from "./GradientBackground"
-import { HealthBar } from "./HealthBar"
-import { Character } from "components/ui/Character"
-import styles from "../../styles/sprite.module.css"
 import Image from "next/image"
-import { allPosts, type Post } from "contentlayer/generated"
-import { type GetStaticProps, type InferGetStaticPropsType } from "next"
-import { useMDXComponent } from "next-contentlayer/hooks"
-import sprite from "public/images/sprite-black-scrop.gif"
 import boxer from "public/images/boxer.gif"
-import healthbar from  "public/images/healthbar.gif"
-import { Work } from "./Work"
 
 export const Layout = ({
     children,

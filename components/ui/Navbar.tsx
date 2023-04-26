@@ -1,10 +1,6 @@
 import React from "react"
 import { FOCUS_VISIBLE_OUTLINE } from "../../lib/constants"
 import { CurrentFilters } from "../../lib/types"
-import TwitterIcon from "../icons/TwitterIcon"
-import YouTubeIcon from "../icons/YouTubeIcon"
-import N from "../icons/Logo"
-import Github from "../icons/Github"
 import Linkedin from "../icons/LinkedinIcon"
 
 

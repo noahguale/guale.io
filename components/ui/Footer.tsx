@@ -1,12 +1,9 @@
 import { FOCUS_VISIBLE_OUTLINE, LINK_SUBTLE_STYLES } from "../../lib/constants"
 import cx from "clsx"
 import Link from "next/link"
-import TwitterIcon from "components/icons/TwitterIcon"
 import Github from "components/icons/Github"
 import LinkedinIcon from "components/icons/LinkedinIcon"
 import InstagramIcon from "components/icons/InstagramIcon"
-import Image from "next/image"
-import instagram from "public/images/icon/instagram.gif"
 
 export const Footer = () => {
   return (

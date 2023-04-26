@@ -1,6 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 import { ProfileImage } from './ProfileImage'
+
 type Props = {
     title: string
     coverImage?: string

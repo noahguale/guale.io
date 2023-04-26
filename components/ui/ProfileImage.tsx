@@ -1,5 +1,4 @@
 import cx from "clsx"
-import Image from "next/image"
 import N from "../icons/Logo"
 
 export const ProfileImage = ({
