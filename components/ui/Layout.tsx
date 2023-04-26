@@ -23,7 +23,7 @@ export const Layout = ({
     return (
       <>
   
-        <GradientBackground />
+        {/* <GradientBackground /> */}
 
         <div className="pointer-events-none fixed top-6 z-30 grid w-full grid-cols-[1fr,min(780px,100%),1fr] px-4">
           <Transition

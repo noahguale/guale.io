@@ -3,7 +3,7 @@ export const GradientBackground = () => {
     return (
       <>
         <svg
-          className="pointer-events-none fixed isolate z-50 opacity-75 mix-blend-soft-light"
+          className="pointer-events-none fixed isolate z-50 opacity-10 bg-slate-900 "
           width="100%"
           height="100%"
         >
@@ -14,7 +14,7 @@ export const GradientBackground = () => {
         </svg>
 
         <svg
-          className="pointer-events-none fixed isolate z-50 opacity-100 mix-blend-soft-light  bg-gradient-to-r from-indigo-400/90 via-sky-500/90 to-blue-500/90 "
+          className="pointer-events-none fixed isolate z-50 opacity-90   bg-gradient-to-r from-slate-900/90 via-sky-500/90 to-blue-500/90 "
           width="100%"
           height="100%"
         >
