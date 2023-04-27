@@ -7,7 +7,7 @@ import InstagramIcon from "components/icons/InstagramIcon";
 
 export const Footer = () => {
   return (
-    <div className="mt-36 pb-36 text-base ">
+    <footer className="mt-28 pb-36 text-base ">
       <div className="text-gray-300">
         <div className="flex flex-col items-center justify-center font-medium lg:flex-row ">
           <div className="flex space-x-10 items-center">
@@ -45,9 +45,12 @@ export const Footer = () => {
         </div>
       </div>
 
-      <p className="flex items-center justify-center mt-4 text-gray-400">
+      <p className="flex items-center justify-center mt-4 text-gray-500 text-sm">
         © 2023 Noah Guale
       </p>
-    </div>
+      <p className="flex items-center justify-center text-gray-500 text-sm mt-2">
+        Built with Next.js, MDX, Tailwind and Vercel
+      </p>
+    </footer>
   );
 };

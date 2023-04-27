@@ -22,7 +22,7 @@ export const Navbar = ({
   currentFilters?: CurrentFilters;
 }) => {
   return (
-    <div className="flex items-center space-x-12 text-base font-semibold leading-none">
+    <div className="flex items-center space-x-4 md:space-x-8 xl:space-x-8 text-base font-medium leading-none">
       <Link href="/projects" className={cx("group", FOCUS_VISIBLE_OUTLINE)}>
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">

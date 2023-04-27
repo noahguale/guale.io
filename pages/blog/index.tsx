@@ -16,7 +16,7 @@ export default function PostListPage({
   return (
     <div>
       <NavBackground children></NavBackground>
-      <div className="flex items-center justify-center px-40 pt-36 py-10 font-semibold text-white text-xl"></div>
+      <div className="flex items-center justify-center px-40 pt-36 mt-8 font-semibold text-white text-xl"></div>
 
       <div className="grid grid-cols-1 gap-x-5 gap-y-6 relative place-items-center animated animatedFadeInUp fadeInUp">
         {posts.map((post) => (

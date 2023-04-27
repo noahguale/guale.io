@@ -10,7 +10,7 @@ export const GradientBackground = () => {
       </svg>
 
       <svg
-        className="pointer-events-none fixed isolate z-50 opacity-90   bg-gradient-to-r from-slate-900/90 via-sky-500/90 to-blue-500/90 "
+        className="pointer-events-none fixed isolate z-50 opacity-20   bg-gradient-to-r from-slate-900/90 via-sky-500/90 to-blue-500/90 "
         width="100%"
         height="100%"
       >
