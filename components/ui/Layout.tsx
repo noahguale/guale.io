@@ -99,7 +99,7 @@ export const Layout = ({
         </Transition>
       </div>
 
-      <div className="relative z-10 grid grid-cols-[1fr,min(640px,100%),1fr] gap-y-8 px-4 pt-32 font-sans text-base text-gray-600 xl:grid-cols-[1fr,minmax(auto,240px),min(640px,100%),minmax(auto,240px),1fr] xl:gap-x-9 xl:px-0 [&>*]:col-start-2 xl:[&>*]:col-start-3 ">
+      <div className="relative z-10 grid grid-cols-[1fr,min(640px,100%),1fr] gap-y-8 px-4 pt-32 mt-8 font-sans text-base text-gray-600 xl:grid-cols-[1fr,minmax(auto,240px),min(640px,100%),minmax(auto,240px),1fr] xl:gap-x-9 xl:px-0 [&>*]:col-start-2 xl:[&>*]:col-start-3 ">
         <LogoSphere />
 
         <div className="flex items-center justify-center ">
@@ -110,8 +110,7 @@ export const Layout = ({
             width={250}
             className="z-40"
           /> */}
-          <div></div>
-          <div className="items-center text-center">
+          <div className="items-center text-center mt-4">
             <h1 className="text-3xl font-medium text-white	 sm:text-4xl">
               Noah Guale
             </h1>
@@ -135,16 +134,17 @@ export const Layout = ({
           </div>
         </div>
 
-        <div className="mt-7 sm:mt-4 content-center block rounded-2xl  bg-white/5">
-          <p className="text-lg text-white p-4">
-            Hello, my name is Noah Guale and I love to create! My interest in
+        <div className="mt-4 sm:mt-4 content-center  block rounded-2xl  bg-white/5">
+          <p className="text-md text-white p-4 text-center">
+            {/* Hello, my name is Noah Guale and I love to create! My interest in
             coding started back in 2013 when I decided to start playing
             Minecraft. From creating my own mods to running a full-scale server,
-            I became passionate about coding.
+            I became passionate about coding. */}
+            Hello, I'm full-stack developer based in Chicago!
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 items-center mt-8">
+        <div className="flex flex-col gap-4 items-center mt-4">
           <span className="text-lg text-gray-400">Contact</span>
 
           <div className="grid grid-cols-2 gap-4 gap-x-10 md:grid-cols-3 justify-items-center	">

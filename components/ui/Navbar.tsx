@@ -27,7 +27,7 @@ export const Navbar = ({
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div className="rounded-lg bg-gradient-to-tl from-slate-500/80 to-stone-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-stone-500/20 group-active:translate-y-1">
-              <CodeBracketIcon className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              <CodeBracketIcon className="w-[18px] transform text-[#181818] transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
           <div className="text-white">Projects</div>
@@ -39,7 +39,7 @@ export const Navbar = ({
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             {/* <div className="rounded-lg bg-gradient-to-tl from-sky-500/80 to-sky-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-blue-500/40 group-active:translate-y-1"> */}
             <div className="rounded-lg bg-gradient-to-tl from-slate-500/80 to-stone-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-stone-500/20 group-active:translate-y-1">
-              <NewspaperIcon className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              <NewspaperIcon className="w-[18px] transform text-[#181818] transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
           <div className="text-white">Blog</div>
@@ -53,7 +53,7 @@ export const Navbar = ({
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div className="rounded-lg bg-gradient-to-tl from-slate-500/80 to-stone-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-stone-500/20 group-active:translate-y-1">
-              <Linkedin className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              <Linkedin className="w-[18px] transform text-[#181818] transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
           <div className="text-white">LinkedIn</div>
@@ -67,7 +67,7 @@ export const Navbar = ({
         <div className="sm:flex sm:items-center sm:space-x-2">
           <div className="mb-1.5 flex justify-center sm:mb-0 sm:block">
             <div className="rounded-lg bg-gradient-to-tl from-slate-500/80 to-stone-300/80 p-1 shadow-lg transition-all duration-300 ease-out group-hover:scale-[1.2] group-hover:rounded-[10px] group-hover:shadow-stone-500/20 group-active:translate-y-1">
-              <DocumentTextIcon className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
+              <DocumentTextIcon className="w-[18px] transform text-[#181818] transition delay-100 duration-500 ease-out group-hover:scale-110" />
             </div>
           </div>
           <div className="text-white">Resume</div>
