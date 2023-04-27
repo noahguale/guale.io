@@ -4,7 +4,7 @@ import Link from "next/link";
 import Github from "components/icons/Github";
 import LinkedinIcon from "components/icons/LinkedinIcon";
 import InstagramIcon from "components/icons/InstagramIcon";
-
+import TwitterIcon from "components/icons/TwitterIcon";
 export const Footer = () => {
   return (
     <footer className="mt-28 pb-36 text-base ">
@@ -20,14 +20,14 @@ export const Footer = () => {
               </Link>
             </div>
 
-            {/* <div>
+            <div>
               <Link
-                href="/blog"
+                href="https://www.twitter.com/noahguale"
                 className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
               >
                 <TwitterIcon className="text-gray-300 w-[18px]" />
               </Link>
-            </div> */}
+            </div>
 
             <a
               href="https://github.com/noahguale"
@@ -45,11 +45,11 @@ export const Footer = () => {
         </div>
       </div>
 
-      <p className="flex items-center justify-center mt-4 text-gray-500 text-sm">
+      <p className="flex items-center justify-center mt-4 text-gray-400 text-sm">
         © 2023 Noah Guale
       </p>
       <p className="flex items-center justify-center text-gray-500 text-sm mt-2">
-        Built with Next.js, MDX, Tailwind and Vercel
+        Built with Next.js & Tailwind
       </p>
     </footer>
   );

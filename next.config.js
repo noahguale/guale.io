@@ -1,13 +1,6 @@
 // next.config.js
 
 const { remarkCodeHike } = require("@code-hike/mdx");
-
-module.exports = {
-  images: {
-    domains: ["www.craftz.dog"],
-  },
-};
-
 const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */

@@ -38,7 +38,7 @@ const Project = ({
 
       <div className="flex items-center justify-center px-40 pt-36 py-10 font-semibold text-sky-300 text-xl"></div>
 
-      <div className="flex items-center justify-center animated animatedFadeInUp fadeInUp">
+      <div className="flex items-center justify-center ">
         <div className="grid grid-cols-1 w-5/12 place-items-center gap-10">
           <div className="flex flex-row place-items-center justify-start w-full">
             <a

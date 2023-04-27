@@ -57,7 +57,7 @@ const Stars = () => {
 
 export const LogoSphere = () => {
   return (
-    <Canvas camera={{ fov: 40, position: [0, 0, 5] }} gl={{ antialias: false }}>
+    <Canvas camera={{ fov: 25, position: [0, 0, 5] }} gl={{ antialias: false }}>
       <VectorSphere />
       <Stars />
       <OrbitControls enableZoom={true} />

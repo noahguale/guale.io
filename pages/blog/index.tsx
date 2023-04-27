@@ -18,7 +18,7 @@ export default function PostListPage({
       <NavBackground children></NavBackground>
       <div className="flex items-center justify-center px-40 pt-36 mt-8 font-semibold text-white text-xl"></div>
 
-      <div className="grid grid-cols-1 gap-x-5 gap-y-6 relative place-items-center animated animatedFadeInUp fadeInUp">
+      <div className="grid grid-cols-1 gap-x-5 gap-y-6 relative place-items-center">
         {posts.map((post) => (
           <Link
             href={`/blog/${post.slug}`}

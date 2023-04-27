@@ -115,7 +115,7 @@ export const Layout = ({
             <h1 className="text-3xl font-medium text-white	 sm:text-4xl">
               Noah Guale
             </h1>
-            <h2 className="align-middle text-lg leading-6 text-white">
+            <h2 className="align-middle text-lg leading-6 text-white mt-2">
               <span className="text-gray-400 ">
                 <span className="hidden sm:inline">Software Engineer</span>
                 {/* <span className="inline sm:hidden" title="Software Engineer">
@@ -135,7 +135,7 @@ export const Layout = ({
           </div>
         </div>
 
-        <div className="mt-7 sm:mt-4 content-center animated animatedFadeInUp fadeInUp block rounded-2xl  bg-white/5">
+        <div className="mt-7 sm:mt-4 content-center block rounded-2xl  bg-white/5">
           <p className="text-lg text-white p-4">
             Hello, my name is Noah Guale and I love to create! My interest in
             coding started back in 2013 when I decided to start playing
@@ -145,16 +145,20 @@ export const Layout = ({
         </div>
 
         <div className="flex flex-col gap-4 items-center mt-8">
-          <p className="text-tertiary text-gray-400">Contact</p>
+          <span className="text-lg text-gray-400">Contact</span>
 
           <div className="grid grid-cols-2 gap-4 gap-x-10 md:grid-cols-3 justify-items-center	">
             <ContactLink href="https://github.com/noahguale" title="github" />
-            <ContactLink
-              href="https://www.figma.com/@noahguale"
-              title="figma"
-            />
-            <ContactLink href="/files/resume.pdf" title="resume" />
             <ContactLink href="mailto:noahguale@gmail.com" title="email" />
+            <ContactLink href="/files/resume.pdf" title="resume" />
+
+            <ContactLink href="https://twitter.com/noahguale" title="twitter" />
+            <ContactLink
+              href="https://instagram.com/noahguale"
+              title="instagram"
+            />
+
+            <ContactLink href="https://codepen.io/noahguale" title="codepen" />
           </div>
         </div>
 
