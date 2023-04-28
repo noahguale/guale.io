@@ -47,7 +47,7 @@ export default function SinglePostPage({
       <NavBackground children></NavBackground>
       <div className="flex items-center justify-center px-40 pt-12 py-10 font-semibold text-white text-xl"></div>
 
-      <article className="mx-auto max-w-3xl py-16 prose prose-neutral  prose-p:-my-1 prose-p:font-light	 prose-headings:text-stone-100 prose-headings:font-medium prose-code:text-sky-300 prose-strong:text-sky-300 prose-a:text-sky-300 lg:prose-lg ">
+      <article className="mx-auto max-w-3xl py-16 prose prose-neutral  prose-p:mt-1 prose-p:font-light	 prose-headings:text-stone-100 prose-headings:font-medium prose-code:text-sky-300 prose-strong:text-sky-300 prose-a:text-sky-300 lg:prose-lg ">
         <div className="block h-full rounded-3xl object-cover object-center bg-white/5 px-5 py-0.5">
           <div className="text-neutral-100 ">
             <div className="text-3xl font-medium my-10">{post.title}</div>

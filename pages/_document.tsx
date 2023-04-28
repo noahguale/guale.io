@@ -5,11 +5,7 @@ export default function Document() {
   return (
     <Html lang="en" className="scroll-p-24">
       <Head>
-        <link
-          rel="icon"
-          type="image/png"
-          href="../public/favicon/favicon.ico"
-        />
+        <link rel="shortcut icon" href="../public/favicon/favicon.ico" />
         <meta name="theme-color" content="#181818" />
         <link
           rel="preload"

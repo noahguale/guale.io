@@ -7,7 +7,14 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next";
 export const getStaticProps: GetStaticProps<{
   posts: Post[];
 }> = () => {
-  return { props: { posts: allPosts } };
+  return {
+    props: {
+      posts: allPosts.sort(
+        (a, b) =>
+          Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+      ),
+    },
+  };
 };
 
 export default function PostListPage({

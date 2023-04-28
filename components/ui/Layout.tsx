@@ -12,6 +12,7 @@ import Image from "next/image";
 import boxer from "public/images/boxer.gif";
 import Logo from "../icons/Logo";
 import { LogoSphere } from "./VectorSphere";
+import Typewriter from "typewriter-effect";
 
 function ContactLink({
   href,
@@ -136,11 +137,7 @@ export const Layout = ({
 
         <div className="mt-4 sm:mt-4 content-center  block rounded-2xl  bg-white/5">
           <p className="text-md text-white p-4 text-center">
-            {/* Hello, my name is Noah Guale and I love to create! My interest in
-            coding started back in 2013 when I decided to start playing
-            Minecraft. From creating my own mods to running a full-scale server,
-            I became passionate about coding. */}
-            Hello, I'm full-stack developer based in Chicago!
+            Hello, I'm a full-stack developer based currently in Chicago!
           </p>
         </div>
 

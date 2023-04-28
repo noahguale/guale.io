@@ -3,7 +3,7 @@ import "../styles/index.css";
 import "@code-hike/mdx/dist/index.css";
 import { seo } from "@/lib/seo";
 import { DefaultSeo } from "next-seo";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
