@@ -7,6 +7,7 @@ export default function Document() {
       <Head>
         <link rel="shortcut icon" href="../public/favicon/favicon.ico" />
         <meta name="theme-color" content="#181818" />
+        <meta name="google-site-verification" content="FaK1rSoPG3Ae5c8uL_BQJMVVdWLOAtgSjNrVvb7dOU0" />
         <link
           rel="preload"
           as="image"
