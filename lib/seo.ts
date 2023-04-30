@@ -6,7 +6,6 @@ const description = `Welcome to my website, where I showcase my coding projects 
 const domain = `guale.io`;
 const twitter = `@noahguale`;
 const meta = `Software Engineer`;
-
 export const seo: DefaultSeoProps = {
   title: title + " | " + meta,
   description,
