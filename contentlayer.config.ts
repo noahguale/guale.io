@@ -7,7 +7,6 @@ const someTheme = require(".//lib/themes/tokyo-nights.json");
 const Post = defineDocumentType(() => ({
   name: "Post",
   contentType: "mdx",
-  // Location of Post source files (relative to `contentDirPath`)
   filePathPattern: `posts/*.mdx`,
   fields: {
     title: { type: "string", required: true },
@@ -18,6 +17,10 @@ const Post = defineDocumentType(() => ({
       type: "list",
       of: Tag,
     },
+    // images: {
+    //   type: "list",
+    //   of: { type: "string" },
+    // }
   },
   computedFields: {
     slug: {

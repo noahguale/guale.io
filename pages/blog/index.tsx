@@ -32,8 +32,12 @@ export default function PostListPage({
             key={post.slug}
             className="w-/12 lg:w-5/12 p-1 md:p-2 block h-full rounded-3xl object-cover object-center bg-white/5 overflow-hidden shadow-surface-elevation-low transition duration-200 hover:bg-sky-100/10 hover:shadow-surface-elevation-medium focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:sky-500/70"
           >
+            <div className="flex flex-row justify-between items-center">
             <div className="text-xl text-white opacity-100 px-4 pt-4 pb-2 font-medium">
               {post.title}
+            </div>
+            <div className=" bg-gradient-to-tl from-slate-500/80 to-stone-300/80 rounded-md px-2 py-2 tracking-tighter font-mono h-8 text-center text-sm	">{post.publishedAt} </div>
+
             </div>
             {/* <span className="text-sm pl-4 text-gray-300">Mar 1</span>
                         <span className="text-sm pl-4 text-gray-300">7,885 views</span>
