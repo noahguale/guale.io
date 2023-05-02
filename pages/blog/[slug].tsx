@@ -5,6 +5,7 @@ import { NavBackground } from "components/ui/NavBackground";
 import { Footer } from "components/ui/Footer";
 import { createOgImage } from "../../lib/createOgImage";
 import Head from "next/head";
+import { NextSeo, ArticleJsonLd } from "next-seo";
 
 export const getStaticPaths = () => {
   return {
@@ -36,13 +37,30 @@ export default function SinglePostPage({
 
   return (
     <div>
-      <Head>
+      <NextSeo
+        openGraph={{
+          type: "website",
+          url: post.slug,
+          title: post.title,
+          description: post.description,
+          images: [
+            {
+              url: ogImage,
+              width: 1600,
+              height: 836,
+              alt: post.title,
+            },
+          ],
+        }}
+      />
+
+      {/* <Head>
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1600" />
         <meta property="og:image:height" content="836" />
         <meta property="og:image:alt" content={post.title} />
         <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      </Head> */}
 
       <NavBackground children></NavBackground>
       <div className="flex items-center justify-center px-40 pt-12 py-10 font-semibold text-white text-xl"></div>
