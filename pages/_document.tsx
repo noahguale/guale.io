@@ -3,23 +3,23 @@ export default function Document() {
   return (
     <Html lang="en" className="scroll-p-24">
       <Head>
-        <link rel="shortcut icon" href="favicon/favicon.ico" />
+        <link rel="shortcut icon" href="favicon/favicon.svg" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="favicon/apple-touch-icon.png"
+          href="favicon/favicon.svg"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="favicon/favicon-32x32.png"
+          href="favicon/favicon.svg"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="favicon/favicon-16x16.png"
+          href="favicon/favicon.svg"
         />
 
         <meta name="theme-color" content="#181818" />
