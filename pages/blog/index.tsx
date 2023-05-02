@@ -36,7 +36,7 @@ export default function PostListPage({
               <div className="text-xl text-white opacity-100 px-4 pt-4 pb-2 font-medium">
                 {post.title}
               </div>
-              <div className=" bg-gradient-to-tl from-slate-500/80 to-stone-300/80 rounded-md px-2 py-2 tracking-tighter font-mono h-8 text-center text-sm	">
+              <div className="text-white font-bold bg-gradient-to-tl from-slate-500/80 to-stone-300/80 rounded-md px-2 py-2 tracking-tighter font-mono h-8 text-center text-sm	">
                 {post.publishedAt}{" "}
               </div>
             </div>

@@ -5,7 +5,7 @@ import { getSortedPostsData, getSortedPostsDataDb } from "../../lib/posts";
 import Image from "next/image";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import YouTubeIcon from "components/icons/YouTubeIcon";
+import Github from "components/icons/Github";
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
@@ -38,7 +38,7 @@ const Projects = ({
         <div className="container py-12 max-w-2xl px-4  sm:px-6 xl:max-w-2xl xl:px-0">
           {/* <h1 className="text-3xl mb-5 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">Projects</h1>
               <p className="text-lg mb-10 leading-7 text-gray-300 dark:text-gray-300">Things I Have Made in the Past. Mostly open source</p>   */}
-          <div className="flex flex-wrap ml-14">
+          <div className="flex flex-col ml-14 items-center">
             {allPostsData.map(
               ({
                 id,
@@ -59,7 +59,7 @@ const Projects = ({
                 blogpost: any;
                 githubUrl: any;
               }) => (
-                <div key={id} className="p-2 w-5/6 xs:w-1/2 md:w-6/12	 ">
+                <div key={id} className="p-2 w-5/6 xs:w-1/2 md:w-7/12	 ">
                   <div className="h-full overflow-hidden border-2 border-gray-400 rounded-md border-opacity-60 dark:border-gray-400 shadow-surface-elevation-low transition duration-200 hover:bg-sky-100/10 hover:shadow-surface-elevation-medium focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:sky-500/70">
                     <div className="p-3">
                       <h2 className="mb-1 text-xl font-bold tracking-tight text-white">
@@ -81,15 +81,20 @@ const Projects = ({
                         {stack.map((item) => (
                           // <div className="w-fit text-center text-xs font-bold text-white/100 bg-gradient-to-tl from-sky-500/80 to-sky-300/80 rounded p-1 mr-2 mt-2">
                           <div className="w-fit text-center text-xs font-bold text-white/100 bg-gradient-to-tl from-slate-500/80 to-stone-300/80 rounded p-1 mr-2 mt-2">
-                            {" "}
-                            {item}{" "}
+                            {item}
                           </div>
                         ))}
                       </div>
-                      <div className="flex flex-row gap-1">
+                      <div className="flex flex-row gap-2">
                         {blogpost ? (
                           <Link href={blogpost}>
                             <ArrowTopRightOnSquareIcon className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
+                          </Link>
+                          
+                        ) : null}
+                        {githubUrl ? (
+                          <Link href={githubUrl}>
+                            <Github className="w-[18px] transform text-white transition delay-100 duration-500 ease-out group-hover:scale-110" />
                           </Link>
                         ) : null}
                       </div>
