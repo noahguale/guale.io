@@ -38,7 +38,7 @@ const Projects = ({
         <div className="container py-12 max-w-2xl px-4  sm:px-6 xl:max-w-2xl xl:px-0">
           {/* <h1 className="text-3xl mb-5 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">Projects</h1>
               <p className="text-lg mb-10 leading-7 text-gray-300 dark:text-gray-300">Things I Have Made in the Past. Mostly open source</p>   */}
-          <div className="flex flex-col ml-14 items-center">
+          <div className="flex flex-col items-center">
             {allPostsData.map(
               ({
                 id,
