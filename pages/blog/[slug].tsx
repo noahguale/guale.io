@@ -65,13 +65,14 @@ export default function SinglePostPage({
       <NavBackground children></NavBackground>
       <div className="flex items-center justify-center px-40 pt-12 py-10 font-semibold text-white text-xl"></div>
 
-      <article className="mx-auto max-w-3xl py-16 prose prose-neutral prose-p:font-light prose-headings:text-stone-100 prose-headings:font-medium prose-headings:underline	 prose-code:text-sky-300 prose-strong:text-sky-300 prose-a:text-sky-300 lg:prose-lg ">
-        <div className="block h-full rounded-3xl object-cover object-center bg-white/5 px-5 py-0.5">
+      {/* <article className="mx-auto max-w-3xl py-16 prose prose-neutral prose-p:font-light prose-headings:text-stone-100 prose-headings:font-medium prose-headings:underline	 prose-code:text-sky-300 prose-strong:text-sky-300 prose-a:text-sky-300 lg:prose-lg "> */}
+      <article className="prose prose-quoteless prose-neutral dark:prose-invert mx-auto my-10">
+        <div className="block h-full rounded-3xl object-cover object-center px-5 py-0.5 ">
           <div className="text-neutral-100 ">
-            <div className="text-3xl font-medium my-10">{post.title}</div>
+            <div className="text-3xl font-medium">{post.title}</div>
           </div>
-          <div className="grid grid-cols-[auto_1fr_auto] items-center mt-1 mb-8 font-mono text-sm max-w-[650px]">
-            <div className="bg-neutral-100 dark:bg-neutral-100 rounded-md px-2 py-1 tracking-tighter">
+          <div className="grid grid-cols-[auto_1fr_auto] items-center font-mono text-sm max-w-[650px] mt-4">
+            <div className="bg-neutral-100 text-black dark:bg-neutral-100 rounded-md px-2 py-1 tracking-tighter">
               {post.publishedAt}
             </div>
             <div className="h-[0.2em] bg-neutral-50 dark:bg-neutral-50" />

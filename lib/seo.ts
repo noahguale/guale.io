@@ -7,7 +7,7 @@ const domain = `guale.io`;
 const twitter = `@noahguale`;
 const meta = `Software Engineer`;
 export const seo: DefaultSeoProps = {
-  title: title + " | " + meta,
+  title: title,
   description,
   openGraph: {
     title,

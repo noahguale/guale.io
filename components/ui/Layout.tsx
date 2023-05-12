@@ -118,16 +118,6 @@ export const Layout = ({
             <h2 className="align-middle text-lg leading-6 text-white mt-2">
               <span className="text-gray-400 ">
                 <span className="hidden sm:inline">Software Engineer</span>
-                {/* <span className="inline sm:hidden" title="Software Engineer">
-                  SWE
-                </span>{" "} */}
-                <span
-                  className="inline sm:hidden text-md"
-                  title="Software Engineer"
-                >
-                  Software Engineer
-                </span>{" "}
-                {/* @ */}
               </span>
               <span className="text-sky-300 text-xl"> </span>
               <span className="font-medium text-white"></span>
@@ -137,7 +127,7 @@ export const Layout = ({
 
         <div className="mt-4 sm:mt-4 content-center  block rounded-2xl  bg-white/5">
           <p className="text-md text-white p-4 text-center">
-            Hello, I'm a full-stack developer based currently in Chicago!
+            Hello, I'm a full-stack developer based currently in Chicago! 
           </p>
         </div>
 
