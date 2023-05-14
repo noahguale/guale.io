@@ -66,7 +66,7 @@ export default function SinglePostPage({
       <div className="flex items-center justify-center px-40 pt-12 py-10 font-semibold text-white text-xl"></div>
 
       {/* <article className="mx-auto max-w-3xl py-16 prose prose-neutral prose-p:font-light prose-headings:text-stone-100 prose-headings:font-medium prose-headings:underline	 prose-code:text-sky-300 prose-strong:text-sky-300 prose-a:text-sky-300 lg:prose-lg "> */}
-      <article className="prose prose-quoteless prose-neutral dark:prose-invert mx-auto my-10">
+      <article className="prose prose-quoteless prose-neutral dark:prose-invert mx-auto my-10 prose-h3:font-semibold prose-summary:text-sky-500">
         <div className="block h-full rounded-3xl object-cover object-center px-5 py-0.5 ">
           <div className="text-neutral-100 ">
             <div className="text-3xl font-medium">{post.title}</div>

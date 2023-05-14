@@ -24,13 +24,13 @@ One of the main focal points of Ouway was populating the app with products that 
 
 One method, if readable was to use the store’s internal API. If the store had a public API, most of the data contained product inventory and location data, which I would then transform for our backend to accept and populate the Ouway app. In this blogpost, I’m going go over one of the API wrappers I wrote for Best Buy.
 
-#### Best Buy API
+### Best Buy API
 
 The Best Buy API provides product data, including pricing, availability, and reviews. The raw JSON data from Best Buy is transformed into an object with attributes that can be utilized. This library streamlines the API call process by taking care of query structure, GET requests, and JSON parsing in the background.
 
 To use the Best Buy API, I wrote a Python wrapper that makes it easy to retrieve data from the API and transform it into a format that can be used by our backend. This wrapper made it possible for us to quickly add Best Buy products to the Ouway app and ensure that our customers had access to the latest products available for same-day delivery. Here’s a closer look into the wrapper:
 
-#### Data Modeling
+### Data Modeling
 
 This file contains the classes that represent the objects returned by the Best Buy API. These classes define the attributes that are returned by the API and provide a convenient way to access them.
 
@@ -50,9 +50,10 @@ class Product:
         self.image_url = data['image']
 ```
 
+
 This is an example of the Product class, which represents a product returned by the Best Buy API. The class constructor takes the raw json of data as an argument and initializes the attributes of the object. Using these classes, we can easily access the data returned by the Best Buy API and transform it into a format that can be used by our backend.
 
-#### Backend
+### Backend
 
 In the backend, we have a `_request` function that makes a request to the Best Buy API. This function takes a `query` and a `category` as arguments and returns a JSON response. We also have a `ProductAPI` class, along with the other API options Best Buy offers, that has several methods for searching the Best Buy product catalog based on different criteria. These methods make use of the `_request` function to retrieve data from the Best Buy API.
 

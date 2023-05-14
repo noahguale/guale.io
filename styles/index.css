@@ -102,6 +102,7 @@ body {
   background: #181818;
 
 }
+
 body::before
 body::after {
   position: absolute;
@@ -117,4 +118,8 @@ body::after {
 body::before {
   background: #181818;
   filter: url(#grainy);
+}
+
+.prose-details {
+  @apply underline font-mono;
 }
