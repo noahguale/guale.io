@@ -2,5 +2,6 @@
 
 import posts__fashionNycApiMdx from './posts__fashion-nyc-api.mdx.json' assert { type: 'json' }
 import posts__howBuiltMySiteMdx from './posts__how-built-my-site.mdx.json' assert { type: 'json' }
+import posts__powerOfOpenaiMdx from './posts__power-of-openai.mdx.json' assert { type: 'json' }
 
-export const allPosts = [posts__fashionNycApiMdx, posts__howBuiltMySiteMdx]
+export const allPosts = [posts__fashionNycApiMdx, posts__howBuiltMySiteMdx, posts__powerOfOpenaiMdx]
