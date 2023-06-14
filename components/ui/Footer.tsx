@@ -36,7 +36,7 @@ export const Footer = () => {
               <Github className="text-gray-300 w-[18px]" />
             </a>
             <a
-              href="https://github.com/noahguale"
+              href="https://www.linkedin.com/in/noahguale/"
               className={cx(LINK_SUBTLE_STYLES, FOCUS_VISIBLE_OUTLINE)}
             >
               <LinkedinIcon className="text-gray-300 w-[18px]" />
