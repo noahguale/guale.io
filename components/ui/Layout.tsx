@@ -127,7 +127,7 @@ export const Layout = ({
 
         <div className="mt-4 sm:mt-4 content-center  block rounded-2xl  bg-white/5">
           <p className="text-md text-white p-4 text-center">
-            Hello, I'm a full-stack developer based currently in Chicago! 
+            Hello, I'm a full-stack developer based currently in New York! 
           </p>
         </div>
 
