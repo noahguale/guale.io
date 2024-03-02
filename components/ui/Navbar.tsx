@@ -60,7 +60,7 @@ export const Navbar = ({
         </div>
       </Link>
 
-      <Link
+{/*       <Link
         className={cx("group", FOCUS_VISIBLE_OUTLINE)}
         href="/files/resume.pdf"
       >
@@ -72,7 +72,7 @@ export const Navbar = ({
           </div>
           <div className="text-white">Resume</div>
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 };
