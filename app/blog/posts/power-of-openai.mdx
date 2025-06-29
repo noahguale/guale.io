@@ -1,0 +1,272 @@
+---
+title: 'The Power of OpenAI'
+description: 'Use OpenAI to learn and create projects'
+publishedAt: '2023-05-18'
+status: 'published'
+# images: ["/public/images/blog/ouway-delivery.jpeg"]
+---
+
+Recently, there has been a lot of buzz around OpenAI and its advanced AI
+capabilities. As someone who is interested in AI and machine learning, I was
+excited to explore the possibilities of working on a project using OpenAI. While
+browsing YouTube, I stumbled across a video by
+[devaslife](https://www.youtube.com/@devaslife) showcasing a
+transcription/translation tool he built using OpenAI's GPT-3. I was inspired by
+the tool and wanted to recreate it myself, but also improve upon it. While
+working on this project, I found myself struggling with certain topics in AI and
+machine learning. To help me learn, I turned to ChatGPT, another OpenAI tool
+that allowed me to ask questions and receive helpful explanations in real-time.
+With the help of OpenAI's tools, I was able to learn and improve my skills as I
+worked on my project.
+
+## Project Details
+
+The project was built using Next.js (Typescript, React, Radix UI, and Tailwind
+CSS), Python, which was used to manage the YouTube audio downloader,
+transcription, and translator using the OpenAI API, and shell scripts to run the
+Python code.
+
+
+```markdown
+PROJECT_ROOT
+├── src/
+│   ├── pages/
+│   ├── api/
+│   ├── components/
+│   └── styles/
+├── public/
+├── transcription/
+├── uploads/
+└── utils/
+```
+
+## Python
+
+The project consists of two python scripts: `transcribe.py`and `translate.py`.
+Just as the name suggests, they manage the transcription and translation of the
+YouTube video text.
+
+The `transcribe.py` script utilizes the OpenAI API to transcribe the YouTube
+video audio to text, while `translate.py` script then takes the resulting text
+and uses the OpenAI API to translate it to the desired language. These scripts
+are run using shell scripts that manage the downloading of the YouTube audio and
+the passing of the audio to the transcription and translation scripts.
+
+## Get the Audio file
+
+yt-dlp is a python package that allows you to download YouTube files.
+
+```bash
+#!/bin/zsh
+
+VIDEO_ID=$1
+
+[ -z "$VIDEO_ID" ] && echo "ERROR: No video ID specified" && exit 1
+
+yt-dlp "https://www.youtube.com/watch?v=$VIDEO_ID" --format m4a -o "./tmp/%(id)s.%(ext)s" 2>&1
+```
+
+This script downloads a YouTube video with the specified video ID in the M4A
+format to a temporary directory with a specific file name format. It checks for
+errors and exits the script with an error message if no video ID is specified.
+
+## Transcription
+
+Once we have the audio file, we can use the neural network, Whisper, an
+automatic speech recognition (ASR) system trained on 680,000 hours of
+multilingual and multitask supervised data collected from the web. Using Whisper
+we can transcribe the audio and return an srt file.
+
+An SRT file, also known as a SubRip Subtitle file, is a plain-text file that
+contains critical information about subtitles. This includes the start and end
+timecodes of your text to ensure your subtitles match your audio, as well as the
+sequential number of subtitles.
+
+```python
+import os
+import openai
+import sys
+from decouple import config
+
+openai.api_key = config("OPENAI_API_KEY")
+video_id = sys.argv[1]
+audio_url = os.path.join(os.getcwd(), 'uploads', video_id + '.m4a')
+
+audio_file = open(audio_url, "rb")
+
+#Set the custom parameters
+params = {
+    'file': audio_file,
+    'model': 'whisper-1',
+    'prompt': 'Transcribe this audio file:',
+    'response_format': 'srt'
+}
+
+#Call the transcribe function with the custom parameters
+transcription = openai.Audio.transcribe(**params)
+
+print(transcription)
+```
+
+## Translate
+
+Once the audio is transcribed, we can read the srt data from the console and
+parse the data to Davinci, one of the language models offered by OpenAI. It is
+powered by the GPT-3 (Generative Pretrained Transformer 3) architecture. The
+translate function takes in three inputs: prompt, max tokens, and temperature.
+Prompts are used to give the model a starting point to generate text. Max tokens
+is the maximum number of tokens to generate for the completion. Temperature
+controls the model's creativity. A higher temperature will generate more diverse
+and creative responses, while a lower temperature will generate more
+conservative and predictable responses.
+
+An important lesson I learned when working with command-line arguments is
+sanitizing. Sanitizing command-line arguments is an important aspect of writing
+secure code. It involves validating and cleaning up the data provided by the
+user to prevent malicious usage or unexpected errors.
+
+```python
+import sys
+import openai
+from decouple import config
+import pysrt
+import argparse
+
+openai.api_key = config("OPENAI_API_KEY")
+input_string = sys.stdin.read()
+subtitles = pysrt.from_string(input_string)
+
+parser = argparse.ArgumentParser(description="A demo script")
+
+parser.add_argument('lang', type=str, help='The language to use for translation')
+parser.add_argument('max_tokens', type=int, choices=range(1, 5000), help='The maximum number of tokens to generate')
+parser.add_argument('temperature', type=float, choices=[x * 0.1 for x in range(0, 11)], help='The temperature for the model')
+
+args = parser.parse_args()
+
+lang = args.lang
+max_tokens = args.max_tokens
+temperature = args.temperature
+
+prompt_base = (
+    "You are a skilled polyglot with proficiency in over 100 languages. "
+    "Below is a segment of the transcript from a video. "
+    f'Please accurately translate the ensuing text into {lang}, '
+    "ensuring you maintain proper grammar, stylistic nuance, and tone. "
+    "Commence the translation from [START] to [END]:\n[START]\n"
+)
+
+def translate(text):
+    prompt = prompt_base + text + "\n[END]"
+
+    res = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=prompt,
+        max_tokens=max_tokens,
+        temperature=temperature
+    )
+    translation = res.choices[0].text.strip()
+    return translation
+
+for index, subtitle in enumerate(subtitles):
+    subtitle.text = translate(subtitle.text)
+    print(subtitle, flush=True)
+```
+
+## Building the UI
+
+To build out the layout for the transcription/translation tool, you used
+[Radix UI](https://radix-ui.com/), a UI component library for React. Radix UI
+provides a variety of pre-built components that can be easily customized to suit
+your needs. This allowed me to quickly create a responsive and visually
+appealing user interface without having to spend too much time on styling.
+
+## APIs
+
+To make the audio download, transcription, and translation functionalities
+accessible via API calls, I used Next.js API routes. This allowed me to easily
+create RESTful API endpoints that could be called from the front-end.
+
+The API routes are located in the `pages/api` directory. There are three API
+routes: `download`, `transcription`, and `translation`.
+
+### Download
+
+The `download` API route takes a YouTube video ID as a query parameter and
+returns the M4A audio file for that video. Here's the code for the `download`
+API route:
+
+```tsx
+export default function GET(
+	request: NextApiRequest,
+	response: NextApiResponse,
+) {
+	const video_id = request.query.video_id as string
+	if (typeof video_id !== 'string') {
+		response.status(400).json({ error: 'Invalid request' })
+		return
+	}
+
+	console.log('video ID:', video_id)
+	const cmd = spawn(path.join(process.cwd(), 'transcription/get-audio.sh'), [
+		video_id || '',
+	])
+	transferChildProcessOutput(cmd, response)
+}
+```
+
+### Transcription
+
+The `transcription` API route takes the audio file as a Base64-encoded string in
+the request body and returns the transcription as an SRT file. Here's the code
+for the `transcription` API route:
+
+```tsx
+export default async (req, res) => {
+	const { audio } = req.body
+
+	if (!audio) {
+		res.status(400).json({ error: 'No audio provided' })
+		return
+	}
+
+	const transcription = await transcribeAudio(audio)
+
+	res.status(200).json({ transcription })
+}
+```
+
+### Translation
+
+The `translation` API route takes the SRT file as a Base64-encoded string in the
+request body and returns the translated SRT file as a JSON object. Here's the
+code for the `translation` API route:
+
+```tsx
+export default async (req, res) => {
+	const { srt, lang, maxTokens, temperature } = req.body
+
+	if (!srt) {
+		res.status(400).json({ error: 'No SRT file provided' })
+		return
+	}
+
+	const translation = await translateSrt(srt, lang, maxTokens, temperature)
+
+	res.status(200).json({ translation })
+}
+```
+
+To use these API routes, you can make HTTP requests to the appropriate endpoint
+from the front-end. For example, to download the audio file for a YouTube video,
+you can make a GET request to `/api/download?videoId=YOUR_VIDEO_ID`.
+
+To use the audio download, transcription, and translation APIs with the React
+components on the site, HTTP requests need to be made to the appropriate
+endpoint from the front-end. For example, to download the audio file for a
+YouTube video, a GET request can be made to
+`/api/download?videoId=YOUR_VIDEO_ID`.
+
+Then using these APIs, in tandem with our React components to display the data!
+To see more of the code please visit the Github repo:
+https://github.com/noahguale/yt-transcribe-translate

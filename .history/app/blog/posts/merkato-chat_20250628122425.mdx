@@ -1,0 +1,112 @@
+---
+title: "I Built a T3 Chat Clone (merkato.chat)"
+description: "I built a T3 Chat Clone (merkato.chat) in 7 days."
+publishedAt: "2025-06-18"
+status: "published"
+# images: ["/public/images/blog/ouway-delivery.jpeg"]
+---
+
+## Backstory
+
+Through the countless random side projects while simultaneously applying for full-time roles, I stumbled up Theo’s new community idea, T3 Chat Cloneathon. If you don’t know Theo he’s the guy you probably have seen on your FYP page on YouTube if you watch any sort of tech videos. If not, he is a tech YouTuber and the founder of Ping, T3 stack, and the main point of this blog post, T3 Chat. And if you’re Theo reading this hey big fan!
+
+I always wanted to do Hack-a-tons and never had many opportunities to do one besides a small one hosted by Google my freshman year. Funny enough I had been on a binge watch with Theo’s videos on his journey building T3 Chat. And just like many in the coding world, AI tools have become integral part of our workflow especially AI Chat applications like ChatGPT and Claude.
+
+## Why I joined and what I expected out of it
+
+I have been using AI Chatbots since the initial release of ChatGPT and have seen the transformation of them from only being able to produce simple code to the whole trend of vibe coding. I tried T3 Chat with the special promo code Theo loves to give out to his viewers and loved the idea of having a multi-modal system. Since then, its been part of my workflow alongside with Claude. 
+
+As soon I saw the post on X it all clicked and knew this was a great opportunity. In this tweet, Theo mentioned about people asking for him and his team to open source T3 Chat, which to no one’s surprise, they don’t plan on it anytime soon, so why not let the masses do it for FREE! But no seriously, when looking closer the idea is great for us developers:
+
+1. Create an OSS AI chat app - which the community wants
+2. Learn how build scaleable products in a short time frame (just like what Theo did)
+3. Possibly win $5000 (who doesn’t love money)
+
+With this, I started my research and game plan.
+
+## Research
+
+I wanted to do things differently with my other side projects, where usually I sketch out a quick design of the project as a whole in my notes or sometimes just in my head. This time, I spent the first few days really understanding the project and what the scopes were to compete and win. Around this same time, I had recently just watched Theo’s video on ["Are junior devs screwed?"](https://www.youtube.com/watch?v=76K2r2UFeM4&t=2535s&ab_channel=Theo-t3%E2%80%A4gg) and he mentioned very good points that I wanted to follow:
+
+1. **Be a Good Developer, Not a Cheat:**
+    - Don't rely on AI tools to avoid the hard parts of learning.
+    - True growth comes from actively solving problems yourself, even if it's painful and feels like you're "feeling dumb."
+2. **Communicate Effectively:**
+    - Learn to communicate concisely and clearly, both in written communication (like DMs and blog posts) and verbally during interviews.
+
+So with this project, even though I was creating an AI Chat app, I didn’t want to rely on it as I have in the past and wanted to document and clearly communicate my work, like with this blogpost!
+
+## Fundamentals
+During the first few days, I went back to watch all the videos Theo released about T3 Chat and took detailed notes. If we're going to build a similar product in a similar timeframe as Theo did, why not learn from all the mistakes he went through? This approach helped me identify the core functionality needed to build out this project.
+
+The main topics that would be essential for building this out included:
+
+1. **Web Sockets**: Two-way communication with more complex, manual reconnection handling requirements.
+2. **Server-Sent Events (SSE)**: One-way connection from server to client. For a chat app, only the server needs the connection to the client in order to send chunks of data back to the user.
+3. **Sync Engine**: Keeping information up to date and managing the differences between client state and server state.
+4. **Stream**: Continuous flow of data chunks that includes the AI Model Stream (raw response from the AI server in chunks), SSE (Server-Sent Events for sending chunks to the user), and Database integration (server sends chunks to Convex database).
+
+## Overview
+
+<img
+  src="/images/blog/merkato-flow.png"
+  alt="merkato.chat architecture flow diagram"
+  className="mx-auto my-6 rounded-lg shadow-lg w-full max-w-2xl"
+  loading="lazy"
+  aria-label="merkato.chat architecture flow diagram"
+  tabIndex={0}
+/>
+**1. User Interaction & AI Generation:**
+
+- The user interacts with the Chat interface, sending a message (e.g., "Write three poems about sync engines").
+- This message is sent to the Chat API
+- The API authenticates the user and processes the request.
+- The API sends the request to an AI language model provider (like Claude).
+
+**2. Streaming AI Response:**
+
+- The AI model generates the response in a stream, sending down individual chunks of text as they become available.
+- The Chat API receives this streamed response.
+- The API immediately sends the chunks to the user via Server-Sent Events
+
+**3. Optimistic UI Updates:**
+
+- The client receives the SSE stream and updates the UI in real-time with the incoming chunks.
+- This provides a quick, immediate rendering of the AI's output.
+
+**4. Database Persistence:**
+
+- While the AI response is streaming to the client, the Chat API also sends chunked updates to the Convex database.
+- This ensures that the full AI generation is stored for later use, even if the user loses connection.
+
+With this structure in mind, I was confident I could build this out with the remaining days I had left. Like with most things, that wouldn’t be the case.
+
+## Developing
+
+I started with the foundation: authentication and Convex integration for real-time sync. This went smoothly and gave me confidence. Next came the multi-provider AI integration using the AI SDK. Getting OpenAI, Google, Anthropic, and OpenRouter all working together felt like a major win. The thread management system came together nicely too with auto-generated titles, tags, and search functionality.
+
+But then I hit the wall: streaming responses. This was supposed to be the core feature, the thing that made chat apps feel alive. Server-Sent Events, database chunks, client sync - I understood it all theoretically, but implementing it reliably across multiple AI providers while keeping everything in sync? That became my white whale.
+
+I spent way too much time trying to perfect the streaming architecture instead of moving on to polish what was already working. 
+
+### Internet Died
+
+Just when I thought I was making progress on the streaming issues, Cloudflare went down for over 2 hours on June 12th. Their Workers KV service failed, taking down a massive chunk of the internet including my deployment pipeline and testing environment. Theo thankfully gave us an extra day to polish everything which was really great!
+
+### Getting Sick? Excuses?
+
+Then I made the brilliant decision to order sketchy Chinese food during the final weekend. Food poisoning knocked me out for almost a full day. I wasn’t really derailed, but it would have been nice to have an extra day to finish up streaming!
+
+## Final Sprint
+
+With time running out, I focused on documenting what actually worked instead of chasing the streaming feature that was consuming all my time. The final submission had solid multi-provider chat, comprehensive thread management, search, keyboard shortcuts, and BYOK support. 
+
+## What I learned
+
+Three big takeaways from this experience:
+
+1. **Stay focused on the original plan.** I got way too caught up trying to perfect the streaming feature instead of building out the full MVP. Should have moved on and circled back if time allowed.
+2. **Be more confident in my skills.** The final product proved I could build sophisticated applications under pressure. I had the technical chops all along but kept second-guessing myself.
+3. **Join more hackathons and get my work out there.** This experience showed I can compete with talented developers and deliver meaningful results. I need to stop hiding behind side projects and start showcasing what I can actually build.
+
+I appreciate the opportunity of working on the T3 Chat Cloneathon and I know this will be the jump start in my career.

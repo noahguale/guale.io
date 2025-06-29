@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "title": "yt-transcribe-translate",
+            "date": "2023-05-18",
+            "excerpt": "YouTube video transcription/translator tool using OpenAI",
+            "stack": [
+                "Typescript",
+                "Python",
+                "Next.js",
+                "Tailwind",
+                "OpenAI"
+            ],
+            "githubUrl": "https://github.com/noahguale/yt-transcribe-translate",
+            "blogpost": "/blog/power-of-openai"
+        }
+    ]
+}

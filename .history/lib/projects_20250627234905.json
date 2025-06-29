@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "title": "yt-transcribe-translate",
+            "date": "2023-05-18",
+            "excerpt": "YouTube video transcription/translator tool using OpenAI",
+            "stack": [
+                "Typescript",
+                "Python",
+                "Next.js",
+                "Tailwind",
+                "OpenAI"
+            ],
+            "githubUrl": "https://github.com/noahguale/yt-transcribe-translate",
+            "blogpost": "/blog/power-of-openai"
+        },
+        {
+            "title": "bestbuy-api-wrapper",
+            "date": "2022-06-01",
+            "excerpt": "Python API wrapper for Best Buy",
+            "stack": [
+                "Python"
+            ],
+            "githubUrl": "https://github.com/noahguale/bestbuy-api-wrapper/tree/main",
+            "blogpost": "/blog/fashion-nyc-api"
+        }
+    ]
+}

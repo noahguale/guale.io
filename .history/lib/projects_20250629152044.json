@@ -1,0 +1,126 @@
+{
+    "projects": [
+        {
+            "title": "flowframe",
+            "date": "2024-06-29",
+            "excerpt": "Modern social media analytics tool designed to help content creators master the art of content creation and dominate social media.",
+            "stack": [
+                "Typescript",
+                "Next.js",
+                "Tailwind",
+                "OpenAI"
+            ],
+            "githubUrl": "https://github.com/noahguale/yt-transcribe-translate",
+            "blogpost": "/blog/power-of-openai",
+            "featured": true
+        },
+        {
+            "title": "yt-transcribe-translate",
+            "date": "2023-05-18",
+            "excerpt": "YouTube video transcription/translator tool using OpenAI",
+            "stack": [
+                "Typescript",
+                "Python",
+                "Next.js",
+                "Tailwind",
+                "OpenAI"
+            ],
+            "githubUrl": "https://github.com/noahguale/yt-transcribe-translate",
+            "blogpost": "/blog/power-of-openai",
+            "featured": true
+        },
+        {
+            "title": "bestbuy-api-wrapper",
+            "date": "2022-06-01",
+            "excerpt": "Python API wrapper for Best Buy",
+            "stack": [
+                "Python"
+            ],
+            "githubUrl": "https://github.com/noahguale/bestbuy-api-wrapper/tree/main",
+            "blogpost": "/blog/fashion-nyc-api",
+            "featured": true
+        },
+        {
+            "title": "guale.io",
+            "date": "2023-04-27",
+            "excerpt": "Portfolio built with Next.js, Tailwind, and deployed with Vercel",
+            "stack": [
+                "Next.js",
+                "Tailwind",
+                "Typescript",
+                "MDX",
+                "Vercel"
+            ],
+            "githubUrl": "https://github.com/noahguale/guale.io",
+            "blogpost": "/blog/how-built-my-site",
+            "featured": true
+        },
+        {
+            "title": "hiv-genome",
+            "date": "2018-01-05",
+            "excerpt": "Alignment tool for 3000 viral genotypes of HIV, determining mutation probabilities",
+            "stack": [
+                "Python",
+                "Biopython",
+                "pandas",
+                "seaborn"
+            ],
+            "githubUrl": "",
+            "blogpost": "/files/hiv.pdf",
+            "featured": false
+        },
+        {
+            "title": "pos-system",
+            "date": "2021-05-01",
+            "excerpt": "Django web app (POS system) demo for sales/client education, showcasing GCP",
+            "stack": [
+                "Python",
+                "Django",
+                "Terraform",
+                "LookerEmbedded",
+                "GCP"
+            ],
+            "githubUrl": "",
+            "blogpost": "",
+            "featured": false
+        },
+        {
+            "title": "reactor-design",
+            "date": "2021-01-01",
+            "excerpt": "MatLab script of a reactor to produce aromatics from paraffins via catalytic reforming",
+            "stack": [
+                "Matlab",
+                "LaTex"
+            ],
+            "githubUrl": "https://github.com/noahguale/reactor",
+            "blogpost": "/files/reactor.pdf",
+            "featured": false
+        },
+        {
+            "title": "spotify-wrapped",
+            "date": "2023-06-14",
+            "excerpt": "Personal spin-off of Spotify Wrapped",
+            "stack": [
+                "Typescript",
+                "Next.js",
+                "Tailwind",
+                "Remotion"
+            ],
+            "githubUrl": "https://github.com/noahguale/spotify-wrapped-display",
+            "blogpost": "https://spotify-wrapped-display.vercel.app/",
+            "featured": false
+        },
+        {
+            "title": "suggestions-rest-api",
+            "date": "2021-05-01",
+            "excerpt": "REST API where people can make a suggestions board and interact with it",
+            "stack": [
+                "Python",
+                "Flask"
+            ],
+            "githubUrl": "https://github.com/noahguale/suggestions-app",
+            "blogpost": "",
+            "featured": false
+        }
+    ]
+}
