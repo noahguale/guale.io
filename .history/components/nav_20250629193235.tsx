@@ -13,7 +13,7 @@ const navItems = {
 		name: 'blog',
 	},
 	'https://www.awtar.dev/': {
-		name: 'hire me?',
+		name: 'hire me',
 	},
 }
 
