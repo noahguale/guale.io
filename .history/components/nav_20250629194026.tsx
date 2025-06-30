@@ -34,7 +34,7 @@ export function Navbar() {
 								<Link
 									key={path}
 									href={path}
-									className='hover:text-muted-foreground dark:hover:text-muted-foreground border-foregorund relative m-1 flex border py-1 px-2 align-middle transition-all'
+									className='hover:text-muted-foreground dark:hover:text-muted-foreground border-foregorund relative m-1 flex border py-1 px-2 align-middle text-sm transition-all'
 								>
 									{name}
 								</Link>
