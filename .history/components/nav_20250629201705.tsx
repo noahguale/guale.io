@@ -26,7 +26,7 @@ export function Navbar() {
 					id='nav'
 				>
 					<Link href='/'>
-						<Logo className='h-8 w-8 md:h-10 md:w-10' />
+						<Logo className='h-10 w-10' />
 					</Link>
 					<div className='flex flex-row space-x-0'>
 						{Object.entries(navItems).map(([path, { name }]) => {
@@ -34,7 +34,7 @@ export function Navbar() {
 								<Link
 									key={path}
 									href={path}
-									className='hover:text-muted-foreground dark:hover:text-muted-foreground border-foregorund relative m-1 flex border py-1 px-2 align-middle text-xs transition-all md:text-base'
+									className='hover:text-muted-foreground dark:hover:text-muted-foreground border-foregorund relative m-1 flex border py-1 px-2 align-middle text-xs transition-all md:text-lg'
 								>
 									{name}
 								</Link>
