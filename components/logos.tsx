@@ -1,5 +1,7 @@
+import { cn } from '@/lib/utils'
 import * as React from 'react'
 import type { SVGProps } from 'react'
+import { Layers, LayersIcon } from './animate-ui/icons/layers'
 
 interface LogoProps extends SVGProps<SVGSVGElement> {
 	color?: string
@@ -564,7 +566,20 @@ const Merkato = (props: SVGProps<SVGSVGElement>) => {
 	)
 }
 
-export default Merkato
+const AwtarLogo = ({
+	className,
+	color,
+	...props
+}: LogoProps & { className?: string }) => {
+	return (
+		<Layers
+			className={cn(className, 'skeu-button rounded-xl p-2')}
+			animateOnHover
+			style={{ color }}
+		/>
+	)
+}
+
 export {
 	Python,
 	OpenAI,
@@ -582,4 +597,5 @@ export {
 	Convex,
 	Flowframe,
 	Merkato,
+	AwtarLogo,
 }

@@ -456,3 +456,12 @@ table {
 .font-ibm-plex-mono {
 	font-family: var(--font-ibm-plex-mono), 'Courier New', monospace;
 }
+
+.skeu-button {
+	--docsearch-key-shadow:
+		inset 0 -2px 0 0 #4a90e2, inset 0 0 1px 1px #a8cbff,
+		0 1px 2px 1px rgba(28, 42, 196, 0.4);
+	--docsearch-key-gradient: linear-gradient(-225deg, #71aafe, #3b82f6);
+	background: var(--docsearch-key-gradient);
+	box-shadow: var(--docsearch-key-shadow);
+}

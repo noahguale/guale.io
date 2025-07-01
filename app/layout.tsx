@@ -14,6 +14,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from '@/components/footer'
 import { baseUrl } from '@/app/sitemap'
 import { ThemeProvider } from 'next-themes'
+import { TooltipProvider } from '@/components/ui/tooltip'
 
 export const metadata: Metadata = {
 	metadataBase: new URL(baseUrl),
@@ -100,13 +101,15 @@ export default function RootLayout({
 					defaultTheme='dark'
 					enableSystem
 				>
-					<main className='mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0'>
-						<Navbar />
-						{children}
-						<Footer />
-						<Analytics />
-						<SpeedInsights />
-					</main>
+					<TooltipProvider>
+						<main className='mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0'>
+							<Navbar />
+							{children}
+							<Footer />
+							<Analytics />
+							<SpeedInsights />
+						</main>
+					</TooltipProvider>
 				</ThemeProvider>
 			</body>
 		</html>
